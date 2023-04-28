@@ -1,0 +1,116 @@
+2023-04-27 07:22:12,570 ERROR: Exception on /auth/login [GET] [in /Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py:1744]
+Traceback (most recent call last):
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/app/auth/routes.py", line 28, in login
+    return render_template('auth/login.html', title=_('Sign In'), form=form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/jocokiss/jktech/app/templates/auth/login.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block 'body'
+    {% block navbar %}
+  File "/Users/jocokiss/jktech/app/templates/base.html", line 38, in block 'navbar'
+    <li><a href="{{ url_for('auth.log-in') }}">
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'auth.log-in'. Did you mean 'auth.login' instead?
+2023-04-27 07:22:46,218 INFO: Microblog startup [in /Users/jocokiss/jktech/app/__init__.py:79]
+2023-04-27 07:51:07,086 INFO: Microblog startup [in /Users/jocokiss/jktech/app/__init__.py:79]
+2023-04-27 07:53:35,906 INFO: Microblog startup [in /Users/jocokiss/jktech/app/__init__.py:79]
+2023-04-27 07:55:53,596 INFO: Microblog startup [in /Users/jocokiss/jktech/app/__init__.py:79]
+2023-04-27 07:58:40,028 INFO: Microblog startup [in /Users/jocokiss/jktech/app/__init__.py:79]
+2023-04-27 08:00:05,347 INFO: j.k.tech startup [in /Users/jocokiss/jktech/app/__init__.py:79]
+2023-04-27 08:00:26,611 INFO: j.k.tech startup [in /Users/jocokiss/jktech/app/__init__.py:79]
+2023-04-27 08:03:18,399 INFO: j.k.tech startup [in /Users/jocokiss/jktech/app/__init__.py:79]
+2023-04-27 08:04:38,645 INFO: j.k.tech startup [in /Users/jocokiss/jktech/app/__init__.py:79]
+2023-04-27 08:06:02,869 INFO: j.k.tech startup [in /Users/jocokiss/jktech/app/__init__.py:79]
+2023-04-27 08:06:06,014 ERROR: Exception on / [GET] [in /Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py:1744]
+Traceback (most recent call last):
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/app/main/routes.py", line 27, in index
+    return render_template('index.html', title=_('Home'))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/jocokiss/jktech/app/templates/index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
+    {% block content -%}
+  File "/Users/jocokiss/jktech/app/templates/base.html", line 65, in block 'content'
+    {% block app_content %}
+  File "/Users/jocokiss/jktech/app/templates/index.html", line 10, in block 'app_content'
+    <h1>Hello, {{ user.username }}!</h1>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'user' is undefined

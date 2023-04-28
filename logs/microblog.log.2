@@ -1,0 +1,105 @@
+2023-04-27 08:06:10,065 ERROR: Exception on /index [GET] [in /Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py:1744]
+Traceback (most recent call last):
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/app/main/routes.py", line 27, in index
+    return render_template('index.html', title=_('Home'))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/jocokiss/jktech/app/templates/index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
+    {% block content -%}
+  File "/Users/jocokiss/jktech/app/templates/base.html", line 65, in block 'content'
+    {% block app_content %}
+  File "/Users/jocokiss/jktech/app/templates/index.html", line 10, in block 'app_content'
+    <h1>Hello, {{ user.username }}!</h1>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'user' is undefined
+2023-04-27 08:06:36,025 INFO: j.k.tech startup [in /Users/jocokiss/jktech/app/__init__.py:79]
+2023-04-27 08:08:36,077 INFO: j.k.tech startup [in /Users/jocokiss/jktech/app/__init__.py:79]
+2023-04-27 08:14:13,898 INFO: j.k.tech startup [in /Users/jocokiss/jktech/app/__init__.py:79]
+2023-04-27 08:17:31,468 INFO: j.k.tech startup [in /Users/jocokiss/jktech/app/__init__.py:79]
+2023-04-27 08:21:12,388 INFO: j.k.tech startup [in /Users/jocokiss/jktech/app/__init__.py:79]
+2023-04-27 08:22:02,004 INFO: j.k.tech startup [in /Users/jocokiss/jktech/app/__init__.py:79]
+2023-04-27 08:23:11,110 INFO: j.k.tech startup [in /Users/jocokiss/jktech/app/__init__.py:79]
+2023-04-27 08:24:20,508 INFO: j.k.tech startup [in /Users/jocokiss/jktech/app/__init__.py:79]
+2023-04-27 08:25:11,949 INFO: j.k.tech startup [in /Users/jocokiss/jktech/app/__init__.py:79]
+2023-04-27 08:25:12,661 ERROR: Exception on / [GET] [in /Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py:1744]
+Traceback (most recent call last):
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/app/main/routes.py", line 27, in index
+    return render_template('index.html', title=_('Home'))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/templating.py", line 146, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/jocokiss/jktech/app/templates/index.html", line 13, in template
+    {% endblock %}
+jinja2.exceptions.TemplateSyntaxError: Unexpected end of template. Jinja was looking for the following tags: 'endblock'. The innermost block that needs to be closed is 'block'.
+2023-04-28 07:11:02,796 INFO: j.k.tech startup [in /Users/jocokiss/jktech/app/__init__.py:79]

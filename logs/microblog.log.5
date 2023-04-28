@@ -1,0 +1,95 @@
+2023-04-26 06:40:09,274 ERROR: Exception on /translate [POST] [in /Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py:1744]
+Traceback (most recent call last):
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/app/main/routes.py", line 145, in translate_text
+    return jsonify({'text': translate(request.form['text'],
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/app/translate.py", line 7, in translate
+    result = client.translate(text,source_language=source_language, target_language=target_language)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/google/cloud/translate_v2/client.py", line 266, in translate
+    response = self._connection.api_request(method="POST", path="", data=data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/google/cloud/_http/__init__.py", line 494, in api_request
+    raise exceptions.from_http_response(response)
+google.api_core.exceptions.Forbidden: 403 POST https://translation.googleapis.com/language/translate/v2?prettyPrint=false: Project #269697093111 has been deleted.
+2023-04-26 06:42:46,357 ERROR: Exception on /translate [POST] [in /Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py:1744]
+Traceback (most recent call last):
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/app/main/routes.py", line 145, in translate_text
+    return jsonify({'text': translate(request.form['text'],
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/app/translate.py", line 7, in translate
+    result = client.translate(text,source_language=source_language, target_language=target_language)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/google/cloud/translate_v2/client.py", line 266, in translate
+    response = self._connection.api_request(method="POST", path="", data=data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/google/cloud/_http/__init__.py", line 494, in api_request
+    raise exceptions.from_http_response(response)
+google.api_core.exceptions.Forbidden: 403 POST https://translation.googleapis.com/language/translate/v2?prettyPrint=false: User Rate Limit Exceeded
+2023-04-26 06:46:17,600 INFO: Microblog startup [in /Users/jocokiss/flask_project/app/__init__.py:79]
+2023-04-26 06:46:23,825 ERROR: Exception on /translate [POST] [in /Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py:1744]
+Traceback (most recent call last):
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/app/main/routes.py", line 145, in translate_text
+    return jsonify({'text': translate(request.form['text'],
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/app/translate.py", line 7, in translate
+    result = client.translate(text,source_language=source_language, target_language=target_language)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/google/cloud/translate_v2/client.py", line 266, in translate
+    response = self._connection.api_request(method="POST", path="", data=data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/google/cloud/_http/__init__.py", line 494, in api_request
+    raise exceptions.from_http_response(response)
+google.api_core.exceptions.Forbidden: 403 POST https://translation.googleapis.com/language/translate/v2?prettyPrint=false: User Rate Limit Exceeded
+2023-04-26 06:49:23,711 INFO: Microblog startup [in /Users/jocokiss/flask_project/app/__init__.py:79]
+2023-04-26 06:58:18,472 INFO: Microblog startup [in /Users/jocokiss/flask_project/app/__init__.py:79]
+2023-04-26 20:18:47,796 INFO: Microblog startup [in /Users/jocokiss/jktech/app/__init__.py:79]
+2023-04-26 21:21:30,425 INFO: Microblog startup [in /Users/jocokiss/jktech/app/__init__.py:79]
+2023-04-26 21:24:24,420 INFO: Microblog startup [in /Users/jocokiss/jktech/app/__init__.py:79]
+2023-04-26 21:31:04,479 INFO: Microblog startup [in /Users/jocokiss/jktech/app/__init__.py:79]
+2023-04-26 21:32:31,106 INFO: Microblog startup [in /Users/jocokiss/jktech/app/__init__.py:79]

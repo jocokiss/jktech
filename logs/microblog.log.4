@@ -1,0 +1,136 @@
+2023-04-26 21:32:31,999 ERROR: Exception on / [GET] [in /Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py:1744]
+Traceback (most recent call last):
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/app/main/routes.py", line 47, in index
+    return render_template('index.html', title=_('Home'), form=form,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/jocokiss/jktech/app/templates/index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block 'body'
+    {% block navbar %}
+  File "/Users/jocokiss/jktech/app/templates/base.html", line 37, in block 'navbar'
+    <li><a href="{{ url_for('social') }}">{{ _('Social') }}</a></li>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'social'. Did you mean 'main.social' instead?
+2023-04-26 21:33:01,033 INFO: Microblog startup [in /Users/jocokiss/jktech/app/__init__.py:79]
+2023-04-26 21:33:03,690 ERROR: Exception on / [GET] [in /Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py:1744]
+Traceback (most recent call last):
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/app/main/routes.py", line 47, in index
+    return render_template('index.html', title=_('Home'), form=form,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/jocokiss/jktech/app/templates/index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block 'body'
+    {% block navbar %}
+  File "/Users/jocokiss/jktech/app/templates/base.html", line 37, in block 'navbar'
+    <li><a href="{{ url_for('index') }}">{{ _('Social') }}</a></li>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'index'. Did you mean 'main.index' instead?
+2023-04-26 21:33:59,222 INFO: Microblog startup [in /Users/jocokiss/jktech/app/__init__.py:79]
+2023-04-26 21:37:15,627 INFO: Microblog startup [in /Users/jocokiss/jktech/app/__init__.py:79]
+2023-04-26 21:37:18,908 ERROR: Exception on /social [GET] [in /Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py:1744]
+Traceback (most recent call last):
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py", line 1845, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/jktech/venv/lib/python3.11/site-packages/flask/app.py", line 2137, in make_response
+    raise TypeError(
+TypeError: The view function for 'main.social' did not return a valid response. The function either returned None or ended without a return statement.
+2023-04-26 21:39:34,959 INFO: Microblog startup [in /Users/jocokiss/jktech/app/__init__.py:79]
+2023-04-27 06:50:43,948 INFO: Microblog startup [in /Users/jocokiss/jktech/app/__init__.py:79]
+2023-04-27 06:55:09,106 INFO: Microblog startup [in /Users/jocokiss/jktech/app/__init__.py:79]
+2023-04-27 06:55:58,548 INFO: Microblog startup [in /Users/jocokiss/jktech/app/__init__.py:79]
+2023-04-27 06:59:15,327 INFO: Microblog startup [in /Users/jocokiss/jktech/app/__init__.py:79]
+2023-04-27 07:01:23,839 INFO: Microblog startup [in /Users/jocokiss/jktech/app/__init__.py:79]
+2023-04-27 07:22:07,297 INFO: Microblog startup [in /Users/jocokiss/jktech/app/__init__.py:79]
